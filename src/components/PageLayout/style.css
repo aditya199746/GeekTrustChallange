@@ -1,0 +1,12 @@
+input {
+  margin-top: 24px;
+}
+.container {
+  margin-top: 24px;
+}
+.input-class {
+  width: 75%;
+}
+.form-check-input {
+  cursor: pointer;
+}
