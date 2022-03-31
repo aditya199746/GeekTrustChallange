@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/GeekTrustChallange/static/css/main.fa25c476.css",
+    "main.js": "/GeekTrustChallange/static/js/main.6110ddfc.js",
+    "static/js/787.5a8089fc.chunk.js": "/GeekTrustChallange/static/js/787.5a8089fc.chunk.js",
+    "index.html": "/GeekTrustChallange/index.html",
+    "main.fa25c476.css.map": "/GeekTrustChallange/static/css/main.fa25c476.css.map",
+    "main.6110ddfc.js.map": "/GeekTrustChallange/static/js/main.6110ddfc.js.map",
+    "787.5a8089fc.chunk.js.map": "/GeekTrustChallange/static/js/787.5a8089fc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa25c476.css",
+    "static/js/main.6110ddfc.js"
+  ]
+}
