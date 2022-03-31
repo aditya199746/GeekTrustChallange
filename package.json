@@ -2,7 +2,7 @@
   "name": "challange",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aditya199746.github.io",
+  "homepage": "https://aditya199746.github.io/GeekTrustChallange",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
@@ -51,6 +51,7 @@
   },
   "devDependencies": {
     "css-loader": "^6.7.1",
+    "gh-pages": "^3.2.3",
     "sass": "^1.49.9"
   }
 }
