@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import PageLayoutContainer from "../../containers/PageLayoutContainer";
+import Todo from "../ToDo";
+
 const useActivity = (props) => {
   const { onStartActivity } = props;
   useEffect(() => {
@@ -8,6 +10,7 @@ const useActivity = (props) => {
   return (
     <div>
       <PageLayoutContainer />
+      {/* <Todo /> */}
     </div>
   );
 };

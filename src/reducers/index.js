@@ -23,6 +23,8 @@ export const apiData = (state = [], { type, dataVal, newData, user }) => {
       const _state = state.filter((newUser) => {
         if (newUser.isChecked !== true) {
           return newUser;
+        } else {
+          return;
         }
       });
 

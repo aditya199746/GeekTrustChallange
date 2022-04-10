@@ -26,11 +26,12 @@ const Index = (props) => {
     role: "",
   });
 
-  useEffect(() => {});
   const [btnState, setBtnState] = useState(true);
   const onCheckChange = (e) => {
     if (e.target.checked) {
       setBtnState(false);
+    } else {
+      setBtnState(true);
     }
     onCheck(e);
   };
@@ -90,15 +91,18 @@ const Index = (props) => {
 
   const deleteSelected = (e) => {
     setDeleteSelected();
-    let btn = false;
+  };
+  useEffect(() => {
+    let btn = true;
     perPageData.map((page) => {
-      if (page.isChecked != true) {
-        btn = true;
+      if (page.isChecked && page.isChecked == true) {
+        btn = false;
         return;
       }
     });
+    console.log(btnState, "btnState");
     setBtnState(btn);
-  };
+  }, [btnState]);
 
   return (
     <div className="container">
@@ -116,6 +120,7 @@ const Index = (props) => {
                         perPageData.filter((user) => user?.isChecked !== true)
                           .length < 1
                       }
+                      data-testid="masterCheck"
                       name="masterCheck"
                       onChange={(e) => onCheckChange(e)}
                     />

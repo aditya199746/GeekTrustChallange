@@ -111,30 +111,31 @@ export const thunks = {
     return (dispatch, getState) => {
       const { perPageData, apiData } = getState();
       const { name, checked } = e.target;
+      let tempUser = [];
       if (name === "masterCheck") {
-        let tempUser = perPageData.map((user) => {
+        tempUser = perPageData.map((user) => {
           return { ...user, isChecked: checked };
         });
 
         dispatch(setUpdatePerPageData(tempUser));
       } else {
-        let tempUser = perPageData.map((user) => {
+        tempUser = perPageData.map((user) => {
           return user.id === name ? { ...user, isChecked: checked } : user;
         });
 
         dispatch(setUpdatePerPageData(tempUser));
-        let checkedApiData = apiData.map((api) => {
-          tempUser.map((temp) => {
-            if (temp.isChecked && temp.id === api.id) {
-              api.isChecked = checked;
-            }
-          });
-          return api;
-        });
-
-        dispatch(setAPIData(checkedApiData));
-        dispatch(setSearchData(checkedApiData));
       }
+      let checkedApiData = apiData.map((api) => {
+        tempUser.map((temp) => {
+          if (temp.isChecked && temp.id === api.id) {
+            api.isChecked = checked;
+          }
+        });
+        return api;
+      });
+
+      dispatch(setAPIData(checkedApiData));
+      dispatch(setSearchData(checkedApiData));
     };
   },
 

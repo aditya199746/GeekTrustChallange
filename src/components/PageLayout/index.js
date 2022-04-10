@@ -10,7 +10,6 @@ const Index = (props) => {
     const inputData = e.target.value;
 
     onChange(inputData);
-    // setStoreSearch(inputData);
   };
 
   return (
