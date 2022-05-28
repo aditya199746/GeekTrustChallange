@@ -8,7 +8,7 @@ const Index = (props) => {
 
   const handleChange = (val) => {
     const inputData = val;
-
+    console.log("////");
     onChange(inputData);
   };
   const bounce = (fun, delay) => {
