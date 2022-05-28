@@ -6,11 +6,22 @@ const Index = (props) => {
 
   const [storeSearch, setStoreSearch] = useState("");
 
-  const handleChange = (e) => {
-    const inputData = e.target.value;
+  const handleChange = (val) => {
+    const inputData = val;
 
     onChange(inputData);
   };
+  const bounce = (fun, delay) => {
+    let timer;
+    return (val) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        fun(val);
+      }, delay);
+    };
+  };
+
+  const debounce = bounce(handleChange, 500);
 
   return (
     <div className="container">
@@ -18,7 +29,7 @@ const Index = (props) => {
         <input
           className="input-class"
           placeholder="search by name, email or role"
-          onChange={(e) => handleChange(e)}
+          onChange={(e) => debounce(e.target.value)}
         ></input>
       </div>
       <TableContainer />

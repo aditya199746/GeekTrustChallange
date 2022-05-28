@@ -6,3 +6,8 @@
   bottom: 39px;
   left: 15%;
 }
+
+.hover-ele:hover {
+  background-color: purple;
+  border-radius: 50%;
+}

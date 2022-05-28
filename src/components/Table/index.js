@@ -161,7 +161,7 @@ const Index = (props) => {
         </div>
       </div>
       <button
-        className="btn btn-danger"
+        className="btn btn-danger hover-ele"
         disabled={btnState}
         onClick={(e) => deleteSelected(e)}
       >
